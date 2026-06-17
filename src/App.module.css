@@ -1,0 +1,48 @@
+
+.focus {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-style: narrow;
+  background: url('./assets/webbg.png') center;
+   -webkit-text-stroke: 1px #27272700; /* Creates the solid outline */
+  text-shadow: 0 0 5px #222222; 
+  background-size: 50%;
+ 
+  background-blend-mode: lighten;
+}
+
+body{
+  margin: 0;
+  overflow: hidden;
+}
+
+.heading {
+  position: relative;
+  top: 30vh;
+  font-size: clamp(2rem, 3vw, 5rem);
+  margin-bottom: 4rem;
+  color: contrast-color(grey);
+  -webkit-transform:scale(0.8,2); /* Safari and Chrome */
+}
+
+.inputbox {
+  position: relative;
+  top: 30vh;
+  width: min(60%, 550px);
+
+  font: 'Arial Narrow', Arial, sans-serif;
+  
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+ 
+
+  font-size: 1rem;
+}
