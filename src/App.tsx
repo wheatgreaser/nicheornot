@@ -10,7 +10,7 @@ function App() {
   var [compdesc, setCompDesc] = useState('');
   var [compname, setCompName] = useState('');
   var [compscore, setCompScore] = useState('');
-  var [jsonval, setJsonval] = useState({});
+  var [jsonval, setJsonval] = useState({"name":" ", "desc":" ", "score":" "});
   const nav = useNavigate();
   function handleChange(e){
     setInputVal(e.target.value);
