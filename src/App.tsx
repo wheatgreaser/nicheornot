@@ -8,12 +8,12 @@ function App() {
   var [showResults, setShowResults] = useState(false);
   var [jsonval, setJsonval] = useState({"name":" ", "desc":" ", "score":" "});
   function handleChange(e: React.FormEvent<HTMLInputElement>){
-    setInputVal(e.target.value);
+    setInputVal((e.target as HTMLInputElement).value);
   }
   function changePage(e: React.FormEvent<HTMLInputElement>){
   
   if(e.key == 'Enter'){
-    setInputVal(e.currentTarget.value);
+    setInputVal((e.target as HTMLInputElement).value);
     console.log(inputval);
     
     fetch("https://wheatgreaser-nicheornotbackendml.hf.space/company/", {
