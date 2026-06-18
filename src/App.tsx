@@ -21,7 +21,7 @@ function App() {
     setInputVal(e.currentTarget.value);
     console.log(inputval);
     
-    fetch("http://127.0.0.1:8000/company/", {
+    fetch("https://wheatgreaser-nicheornotbackendml.hf.space/company/", {
 	method: "POST",
 	body: JSON.stringify({
 	    "name":inputval

@@ -1,5 +1,0 @@
-fastapi
-torch
-pandas
-numpy
-sentence_transformers
