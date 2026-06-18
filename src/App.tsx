@@ -7,10 +7,10 @@ function App() {
   var [showQuery, setShowQuery] = useState(true);
   var [showResults, setShowResults] = useState(false);
   var [jsonval, setJsonval] = useState({"name":" ", "desc":" ", "score":" "});
-  function handleChange(e: React.ChangeEvent<HTMLSelectElement>){
+  function handleChange(e: React.FormEvent<HTMLInputElement>){
     setInputVal((e.target as HTMLInputElement).value);
   }
-  function changePage(e: React.ChangeEvent<HTMLSelectElement>){
+  function changePage(e: React.FormEvent<HTMLInputElement>){
   
   if(e.key == 'Enter'){
     setInputVal((e.target as HTMLInputElement).value);
