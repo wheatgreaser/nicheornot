@@ -7,15 +7,11 @@ function App() {
   var [inputval, setInputVal] = useState('');
   var [showQuery, setShowQuery] = useState(true);
   var [showResults, setShowResults] = useState(false);
-  var [compdesc, setCompDesc] = useState('');
-  var [compname, setCompName] = useState('');
-  var [compscore, setCompScore] = useState('');
   var [jsonval, setJsonval] = useState({"name":" ", "desc":" ", "score":" "});
-  const nav = useNavigate();
-  function handleChange(e){
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>){
     setInputVal(e.target.value);
   }
-  function changePage(e){
+  function changePage(e: React.ChangeEvent<HTMLInputElement>){
   
   if(e.key == 'Enter'){
     setInputVal(e.currentTarget.value);
