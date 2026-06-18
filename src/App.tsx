@@ -10,7 +10,7 @@ function App() {
   function handleChange(e: React.FormEvent<HTMLInputElement>){
     setInputVal((e.target as HTMLInputElement).value);
   }
-  function changePage(e: React.FormEvent<HTMLInputElement>){
+  function changePage(e: eact.SyntheticEvent){
   
   if(e.key == 'Enter'){
     setInputVal((e.target as HTMLInputElement).value);
