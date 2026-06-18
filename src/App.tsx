@@ -36,13 +36,12 @@ function App() {
 
 const Results = () => (
   <div className={styles.results}>
-    <h1 className = {styles.heading}>this is the most similar startup (it may take a few seconds to load)</h1>
+    <h1 className = {styles.heading}>this is the most similar startup (it may take upto a minute to load)</h1>
     <h2 className={styles.heading}>name: {jsonval.name}</h2>
     <h2 className={styles.heading}>description: {jsonval.desc}</h2>
     <h2 className={styles.heading}>score: {jsonval.score}</h2>
     
     <h2 className={styles.heading}>the scale ranges from 0 to 1</h2>
-    <h2 className={styles.heading}>a score above 0.5 should pique your interest</h2>
     
 
   </div>
