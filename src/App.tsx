@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import styles from './App.module.css'
-import { useNavigate } from 'react-router-dom';
 
 function App() {
 
@@ -8,10 +7,10 @@ function App() {
   var [showQuery, setShowQuery] = useState(true);
   var [showResults, setShowResults] = useState(false);
   var [jsonval, setJsonval] = useState({"name":" ", "desc":" ", "score":" "});
-  function handleChange(e: React.KeyboardEvent<FormControl>){
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>){
     setInputVal(e.target.value);
   }
-  function changePage(e: React.KeyboardEvent<FormControl>){
+  function changePage(e: React.ChangeEvent<HTMLInputElement>){
   
   if(e.key == 'Enter'){
     setInputVal(e.currentTarget.value);
