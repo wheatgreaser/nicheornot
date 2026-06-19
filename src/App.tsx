@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import styles from './App.module.css'
 import './globals.css';
-import {ModalOverlay, Modal} from './components/application/modals/modal'; 
 function App() {
 
   var [inputval, setInputVal] = useState('');
   var [showQuery, setShowQuery] = useState(true);
   var [showResults, setShowResults] = useState(false);
   var [jsonval, setJsonval] = useState({"name":" ", "desc":" ", "score":" "});
-  var [showLoader, setShowLoader] = useState(false);
   function handleChange(e: React.FormEvent<HTMLInputElement>){
     setInputVal((e.target as HTMLInputElement).value);
   }
@@ -45,7 +43,6 @@ const Results = () => (
     <h2 className={styles.heading}>score: {jsonval.score}</h2>
     <h2 className={styles.heading}>the scale ranges from 0 to 1</h2>
     {(jsonval.name == " ") ? <img className="profile-photo" src={("loading.gif")} alt={"loader"}/> : null} 
-   <ModalOverlay> <Modal props = {jsonval.name} /> </ModalOverlay> 
 
   </div>
 )
