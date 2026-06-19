@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from './App.module.css'
 import './globals.css';
+import { Analytics } from "@vercel/analytics/next"
 function App() {
 
   var [inputval, setInputVal] = useState('');
@@ -47,7 +48,7 @@ const Results = () => (
 )
   return (
     <>
-
+    <Analytics/>
     {showQuery ?  <div className={styles.focus}>
     <h1 className={styles.heading}>are you niche?</h1>
     
