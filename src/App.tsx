@@ -30,7 +30,6 @@ function App() {
 	
 	setShowQuery(false);
 	setShowResults(true);
-	setShowLoader(true);
       }  
 }
 
