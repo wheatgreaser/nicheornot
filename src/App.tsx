@@ -41,7 +41,7 @@ const Results = () => (
     <h2 className={styles.heading}>description: {jsonval.desc}</h2>
     <h2 className={styles.heading}>score: {jsonval.score}</h2>
     <h2 className={styles.heading}>the scale ranges from 0 to 1</h2>
-    {(jsonval.name == " ") ? <img className="profile-photo" src={("loading.gif")} alt={"loader"}/> : null} 
+    {(jsonval.name == " ") ? <img className="profile-photo" src={("loading.gif")} alt={"loading..."}/> : null} 
 
   </div>
 )
