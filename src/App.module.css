@@ -10,13 +10,11 @@
   overflow: hidden;
   font-family: 'Arial Narrow', Arial, sans-serif;
   font-style: narrow;
-  background: url('./assets/webbg.png') center;
    -webkit-text-stroke: 1px #27272700; 
   text-shadow: 0 0 5px #222222; 
   background-size: 50%;
  
   font-size: clamp(1.5rem, 1.5vw, 5rem);
-  background-blend-mode: lighten;
 }
 .results {
     top: -20vh;
@@ -36,9 +34,9 @@ body{
   overflow: hidden;
 
     background: url('./assets/webbg.png') center;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.4);
     background-size: 50%;
-    background-blend-mode: screen;
+    background-blend-mode: lighten;
 }
 
 .heading {
