@@ -1,6 +1,7 @@
 // @ts-nocheck
 import { useState} from 'react'
 import styles from './App.module.css'
+import ReactPlayer from 'react-player'
 import { Analytics } from '@vercel/analytics/react';
 function App() {
 
@@ -38,12 +39,14 @@ function App() {
 const Results = () => (
   <div className={styles.results}>
     <h1 className = {styles.titleresult}>most similar startup</h1>
-    <h2 className = {styles.subtitle}>semantic comparison can take a couple of minutes, feel free to minimize this tab as you scroll around</h2>
+    <h2 className = {styles.subtitle}>semantic comparison can take upto a minute, watch the subway surfers gameplay while you wait (don't switch tabs if you're on mobile please)</h2>
     <h2 className={styles.heading2}>name: {jsonval.name}</h2>
     <h2 className={styles.heading2}>description: {jsonval.desc}</h2>
     <h2 className={styles.heading2}>semantic similarity: {(jsonval.score * 100) + "%"}</h2>
-    {(jsonval.name == " ") ? <div class="spinner-border" role="status" className = {styles.spinner}>
+    {(jsonval.name == " ") ?<div className = {styles.loader}> <div class="spinner-border" role="status" className = {styles.spinner}>
   <span class="sr-only">Loading...</span>
+</div>
+<ReactPlayer src='https://www.youtube.com/watch?v=QPW3XwBoQlw'  className ={styles.player}/>
 </div>: null }
   </div>
 )
