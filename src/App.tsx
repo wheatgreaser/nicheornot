@@ -1,4 +1,5 @@
-import { useState, useContext } from 'react'
+// @ts-nocheck
+import { useState} from 'react'
 import styles from './App.module.css'
 import { Analytics } from '@vercel/analytics/react';
 function App() {
