@@ -38,7 +38,7 @@ function App() {
 const Results = () => (
   <div className={styles.results}>
     <h1 className = {styles.titleresult}>most similar startup</h1>
-    <h2 className = {styles.subtitle}>this may take a couple of minutes</h2>
+    <h2 className = {styles.subtitle}>semantic comparison can take a couple of minutes, feel free to minimize this tab as you scroll around</h2>
     <h2 className={styles.heading2}>name: {jsonval.name}</h2>
     <h2 className={styles.heading2}>description: {jsonval.desc}</h2>
     <h2 className={styles.heading2}>semantic similarity: {(jsonval.score * 100) + "%"}</h2>
