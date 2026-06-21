@@ -1,70 +1,9 @@
-@import "tailwindcss";
-@import "./theme.css";
-
-@plugin "tailwindcss-animate";
-@plugin "tailwindcss-react-aria-components";
-
-@custom-variant dark (&:where(.dark-mode, .dark-mode *));
-@custom-variant label (& [data-label]);
-@custom-variant focus-input-within (&:has(input:focus));
-
-@utility scrollbar-hide {
-    /* For Webkit-based browsers (Chrome, Safari and Opera) */
-    &::-webkit-scrollbar {
-        display: none;
-        -webkit-appearance: none;
-    }
-
-    /* For IE, Edge and Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+@font-face {
+  font-family: "Helvetica";
+  src:
+    url("Helvetica.ttf"),
 }
 
-@utility transition-inherit-all {
-    transition-property: inherit;
-    transition-duration: inherit;
-    transition-timing-function: inherit;
-}
-
-html,
-body {
-    font-family: var(--font-body);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-variant-ligatures: contextual;
-    font-variant-ligatures: contextual;
-    -webkit-font-kerning: normal;
-    font-kerning: normal;
-}
-
-/* Hide the default expand arrow on Safari.  */
-details summary::-webkit-details-marker {
-    display: none;
-}
-
-/* Hide default arrows from number inputs. */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-/* Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
-/* Hide the default clear button (X) from search inputs. */
-input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-}
-
-/* Hide the default outline on chart elements. */
-.recharts-surface,
-.recharts-surface g,
-.recharts-surface path {
-    outline: none;
-}
 .focus {
   position: relative;
   display: flex;
@@ -74,11 +13,9 @@ input[type="search"]::-webkit-search-cancel-button {
   align-items: center;
   margin: 0;
   overflow: hidden;
-  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-family: Helvetica;
   font-weight: bold;
-  font-style: narrow;
-   -webkit-text-stroke: 1px #27272700; 
-  text-shadow: 0 0 5px #222222; 
+  color: white;
   background-size: 50%;
  
   font-size: clamp(1.5rem, 1.5vw, 5rem);
@@ -91,10 +28,14 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     flex-direction: column;
     align-items:center;
-    margin: 0;
+    margin: auto;
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     font-size: 17px;
+    color: white;
+}
+h1{
+  color: white;
 }
 img{
     position: relative;
@@ -106,18 +47,41 @@ body{
   margin: 0;
   overflow: hidden;
 
-    background: url('./assets/webbg.png') center;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,1);
     background-size: 50%;
-    background-blend-mode: lighten;
 }
 
 .heading {
   position: relative;
   top: 30vh;
   margin-bottom: 4rem;
-  color: contrast-color(grey);
-  -webkit-transform:scale(0.8,2); /* Safari and Chrome */
+}
+.heading2 {
+    
+  position: relative;
+    justify-content: center;
+    margin-left: 2rem;
+
+}
+
+.container{
+    justify-content: center;
+
+}
+
+
+
+.titleresult {
+  position: relative;
+  top: 30vh;
+  font-size: 40px;  
+}
+
+.subtitle{
+    position: relative;
+    margin-top: 30vh;
+    font-size: 10px;
+    margin-bottom: 4rem;
 }
 
 .inputbox {
@@ -134,3 +98,13 @@ body{
 
   font-size: 1rem;
 }
+
+@media only screen and (max-width: 480px) {
+    .heading2{
+
+    margin-left: 2rem;
+    margin-right: auto;
+    }
+}
+
+

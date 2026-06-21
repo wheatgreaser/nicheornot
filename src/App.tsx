@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import styles from './App.module.css'
-import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 function App() {
 
@@ -37,13 +36,14 @@ function App() {
 
 const Results = () => (
   <div className={styles.results}>
-    <h1 className = {styles.heading}>this is the most similar startup (it may take upto a minute to load)</h1>
-    <h2 className={styles.heading}>name: {jsonval.name}</h2>
-    <h2 className={styles.heading}>description: {jsonval.desc}</h2>
-    <h2 className={styles.heading}>score: {jsonval.score}</h2>
-    <h2 className={styles.heading}>the scale ranges from 0 to 1</h2>
-    {(jsonval.name == " ") ? <img className="profile-photo" src={("loading.gif")} alt={"loading..."}/> : null} 
-
+    <h1 className = {styles.titleresult}>most similar startup</h1>
+    <h2 className = {styles.subtitle}>this may take a couple of minutes</h2>
+    <h2 className={styles.heading2}>name: {jsonval.name}</h2>
+    <h2 className={styles.heading2}>description: {jsonval.desc}</h2>
+    <h2 className={styles.heading2}>semantic similarity: {(jsonval.score * 100) + "%"}</h2>
+    {(jsonval.name == " ") ? <div class="spinner-border" role="status" className = {styles.spinner}>
+  <span class="sr-only">Loading...</span>
+</div>: null }
   </div>
 )
   return (
